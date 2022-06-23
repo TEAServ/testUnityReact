@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/ac990846d0.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+        <style>
+            .skillSectionHeader
+            {
+                padding: 0px 145px;
+                text-align: center;
+                margin: 30px;
+            }
+            .headerTitle
+            {
+                font-size: 50px;
+                font-weight: 500;
+            }
+            .headerDes
+            {
+                font-size: 20px;
+                font-weight: 400;
+            }
+            .skillContainer
+            {
+                /* height: 650px; */
+
+            }
+            .skillDetails
+            {
+                background-color: rgba(255, 255, 0, 0);
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                overflow: hidden;
+                justify-content: center;
+                align-items: center;
+                /* align-content: center; */
+
+            }
+            .skillImgMain
+            {
+                width: 400px;
+               height: 500px;
+               position: relative;
+               z-index: 2;
+
+            }
+
+            .skillDetailsMain
+            {
+                background-color: rgb(34, 45, 63);
+                text-align: center;
+                width: 100%;
+                border-radius: 5px;
+                padding: 0px 20px 10px 20px;
+               
+
+   
+            }
+            .skillTitle
+            {
+                font-size: 32px;
+                color: white;
+                font-weight: 500;
+                text-shadow: 0px 0px 6px rgb(255, 255, 255);
+                display: inline-block;
+                
+
+            }
+            .skillDes
+            {
+                font-size: 17px;
+                color: white;
+                font-weight: 400;
+            }
+            .skillBtns
+            {
+                
+                background-color: rgba(0, 0, 0, 0);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                align-items: center;
+                align-content: center;
+                
+                padding: 0px 150px;
+        
+        
+            }
+
+            .btnsContainer
+            {
+                
+               
+                background: rgba(255, 0, 0, 0);
+                /* height: 100%; */
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+
+                
+            }
+            .skillBtn
+            {
+                width: 90px;
+                height: 100px;
+                border: 2px solid rgb(121, 121, 121);
+                border-radius: 5px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                background-color: rgb(34, 45, 63);
+                transform: skew(25rad);
+                 transition: transform 0.3s; 
+            }
+            .BtnImg
+            {transform: skew(-25rad);
+             
+                
+            }
+            .skillBtn:hover
+            {
+               
+                
+                transform: scale(1.1, 1.1) skew(25rad);
+                background-color: rgb(195, 144, 4);
+                cursor: pointer;
+            }
+            .skillBtnCont
+            {
+                text-align: center;
+                display: inline-block;
+                margin: 1px 2px;
+            }
+            .skillBtnCont:hover .skillBtn
+            {
+                border: 2px solid rgb(255, 255, 255);
+                transform: scale(1.2, 1.2) skew(25rad);
+                background-color: rgb(195, 144, 4);
+                cursor: pointer;
+                position: relative;
+                z-index: 5;
+            }
+            .skillBtnContSelected
+            {
+                text-align: center;
+                display: inline-block;
+                margin: 1px 2px;
+
+            }
+            .skillBtnContSelected .skillBtn
+            {
+                width: 90px;
+                height: 100px;
+                border: 2px solid rgb(255, 255, 255);
+                border-radius: 5px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                transform: scale(1.2, 1.2) skew(25rad);
+                background-color: rgb(195, 65, 4);
+                cursor: pointer;
+                position: relative;
+                z-index: 5;
+
+            }
+
+            .skillBtnContSelected .btnTitle
+            {
+                color: tomato !important;
+                position: relative;
+                z-index: 8;
+
+            }
+
+            .skillBtnCont:hover .btnTitle
+            {
+                color: tomato;
+                position: relative;
+                z-index: 8;
+
+            }
+            .btnTitle
+            {
+                display: inline-block;
+                cursor: pointer;
+                font-size: 17px;
+                font-weight: 500;
+                background-color: white;
+                border-radius: 5px;
+                width: fit-content;
+
+            }
+            .detailsBtn
+            {
+                transform: skew(25rad);
+                border-radius: 0px;
+                font-size: 19px;
+                font-weight: 500;
+            }
+            .skillTitleDes
+            {
+                background-color: rgba(0, 128, 128, 0); height: 80px; display: flex; justify-content: center; align-items: center;
+
+            }
+            .sep
+            {
+                display: inline-block;
+                width: 100%;
+                border: 1px solid white;
+            }
+            @media screen and (max-width: 1080px) 
+            {
+                .skillSectionHeader
+                {
+                    padding: 0px;
+
+                }
+                .skillBtns{
+                    padding: 0px 110px;
+                }
+                .skillTitleDes
+                {
+                    height: fit-content;
+                }
+                /* .skillDetails{display: none;} */
+
+                
+
+            }
+            @media screen and (max-width: 800px) 
+            {
+                .skillSectionHeader
+                {
+                    padding: 0px;
+
+                }
+                .skillBtns{
+                    padding: 0px 45px;
+                }
+                .skillTitleDes
+                {
+                    height: fit-content;
+                }
+                /* .skillDetails{display: none;} */
+
+                
+
+            }
+
+
+            @media screen and (max-width: 600px) 
+            {
+                .skillSectionHeader
+                {
+                    padding: 0px;
+
+                }
+                .skillBtns{
+                    padding: 0px 50px;
+                }
+                .skillDetails{display: none;}
+
+                
+
+            }
+            @media screen and (max-width: 400px) 
+            {
+                .skillSectionHeader
+                {
+                    padding: 0px;
+
+                }
+                .skillBtns{
+                    padding: 0px;
+                }
+                .skillDetails{display: none;}
+
+                
+
+            }
+
+        </style>
+    </head>
+    <body style="background-color: rgba(224, 224, 224, 0)">
+        <div>
+        <div class="skillSectionHeader">
+            <span class="headerTitle">Skills</span>
+            <br>
+            <span class="headerDes">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam dolor quibusdam aspernatur. Rem libero qui eligendi totam esse, consequuntur culpa cumque ducimus nihil minus at illo deleniti quod in amet?</span>
+        </div>
+        
+        <div  class="container">
+            <div class="row skillContainer">
+                
+                <div  class="col-sm-5 skillDetails">
+                    
+                    <img class="skillImgMain img-fluid" src="400x500Skill.png" alt="">
+                    
+                    
+                    
+                    <div class="skillDetailsMain" style=" background-image: url('ppp.png');" >
+                        <span class="skillTitle">React.js</span>
+                        <div class="sep"></div>
+                        <div class="skillTitleDes">
+                            <span class="skillDes">fgd fgdgdhjew wrwwe wwfgqe uwtklasdha ayyg dfgd gfuh sglwuge wfuywegfsd fsuterog erugsyug suyfwfhwuwer gyfuhgs uy wfgher gwykfs</span>
+
+                        </div>
+                        
+
+                    </div>
+
+    
+                </div>
+                <div class="col-sm-7 skillBtns">
+                    <div class="btnsContainer">
+                            <div class="skillBtnCont">
+                                <div class="skillBtn">
+                                    <img class="BtnImg" src="100x100React3.png" alt="">
+                                </div>
+                                <span class="btnTitle" >React.js</span>
+                            </div>
+                            <div class="skillBtnCont">
+                                <div class="skillBtn">
+                                    <img class="BtnImg" src="icon-portrait112x100.png" alt="">
+                                </div>
+                                <span class="btnTitle" >React.js</span>
+                            </div>
+                            <div class="skillBtnContSelected">
+                                <div class="skillBtn">
+                                    <img class="BtnImg" src="100x100React3.png" alt="">
+                                </div>
+                                <span class="btnTitle" >React.js</span>
+                            </div>
+                            <div class="skillBtnCont">
+                                <div class="skillBtn">
+                                    <img class="BtnImg" src="icon-portrait112x100.png" alt="">
+                                </div>
+                                <span class="btnTitle" >React.js</span>
+                            </div>
+                            <div class="skillBtnCont">
+                                <div class="skillBtn">
+                                    <img class="BtnImg" src="icon-portrait112x100.png" alt="">
+                                </div>
+                                <span class="btnTitle" >React.js</span>
+                            </div>
+                            <div class="skillBtnCont">
+                                <div class="skillBtn">
+                                    <img class="BtnImg" src="icon-portrait112x100.png" alt="">
+                                </div>
+                                <span class="btnTitle" >React.js</span>
+                            </div>
+                            <div class="skillBtnCont">
+                                <div class="skillBtn">
+                                    <img class="BtnImg" src="icon-portrait112x100.png" alt="">
+                                </div>
+                                <span class="btnTitle" >React.js</span>
+                            </div>
+                            <div class="skillBtnCont">
+                                <div class="skillBtn">
+                                    <img class="BtnImg" src="icon-portrait112x100.png" alt="">
+                                </div>
+                                <span class="btnTitle" >React.js</span>
+                            </div>
+
+
+
+
+
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-warning detailsBtn" disabled>Show details</button>
+    
+                </div>
+            </div>
+            <br><br><br>
+
+        </div>
+    </div>
+        
+        <script>
+
+        </script>
+    </body>
+</html>

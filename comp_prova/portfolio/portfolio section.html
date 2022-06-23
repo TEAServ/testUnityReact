@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/ac990846d0.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+        <style>
+            .portCont
+            {
+
+
+                background-image: url("pbg - Copy.jpeg");
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
+            }
+            .portTitle
+            {
+                color: white;
+                font-size: 140px;
+                font-weight: 500;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            }
+            .portTitlee
+            {
+                
+                color: white;
+                font-size: 75px;
+                font-weight: 400;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+            }
+            .portBtn
+            {
+                /* color: white !important; */
+                width: 200px;
+                font-weight: 500;
+                border-width: 3px;
+               
+            }
+            .portBtnCont
+            {
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
+                margin-bottom: 40px;
+               
+            }
+            .portBtnContt
+            {
+                display: none;
+                justify-content: center;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                
+            }
+            .portLeft
+            {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                
+            }
+            .portRight
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            @media screen and (max-width: 800px) 
+            {
+                .portTitle{font-size: 70px;}
+                .portTitlee{font-size: 40px;}
+                .portBtnContt{display: flex;}
+                .portBtnCont{display: none;}
+                /* /////////////////////////////////////////// */
+
+                .portCard{width: 350px !important;}
+                .portCardImg{width: 350px !important;}
+                .cardContent{width: 350px !important;}
+            }
+            @media screen and (max-width: 350px) 
+            {
+                .portTitle{font-size: 70px;}
+                .portTitlee{font-size: 40px;}
+                .portBtnContt{display: flex;}
+                .portBtnCont{display: none;}
+                /* /////////////////////////////////////////// */
+
+                .portCard{width: 300px !important;}
+                .portCardImg{width: 300px !important;}
+                .cardContent{width: 300px !important;}
+            }
+            /* ////////////////////////////////////////////// */
+            .portCard
+            {
+
+                display: inline-block;
+                width: 400px;
+                height: 200px;
+                overflow: hidden;
+                box-shadow: 6.5px 6.5px 7px rgb(184, 184, 184) ;
+                margin: 15px 0px;
+
+            }
+            .portCardImg
+            {
+                
+
+                width: 400px;
+                height: 200px;
+
+
+
+            }
+            .cardContent
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 400px;
+                height: 200px;
+                position: relative;
+                top: -200px;
+                z-index: 99;
+
+                background-color: rgba(61, 61, 61, 0.527);
+                opacity: 0;
+                transition: all 0.5s;
+                
+
+                
+
+            }
+            
+            .cardContent:hover
+            {
+                cursor:default;
+                opacity: 1;
+            }
+            .portProjName
+            {
+                color: white;
+                font-size: 31px;
+                font-weight: 500;
+                margin-bottom: 10px;
+                
+
+            }
+            .portProjBtn
+            {
+                font-size: 17px;
+                font-weight: 400;
+                border-width: 2px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="container-fluid portCont">
+            <div class="row">
+
+                <div class="col-lg-7 portLeft">
+                    <span class="portTitle">Portfolio</span><br>
+                    <span class="portTitlee">check my projects</span><br>
+                    <div class="portBtnCont">
+                        <button type="button" class="btn btn-outline-light btn-lg  portBtn">Explore All</button>
+                    </div>
+                </div>
+                <div class="col-lg-5 portRight">
+                    <!-- /////////////////////////////////////// -->
+                    <div class="portCard">
+                        <img class="img-fluid portCardImg" src="jum.png" alt="Chania">
+                        <div class="cardContent">
+                            <span class="portProjName">Jumia Clone</span>
+                            <button type="button" class="btn btn-outline-warning portProjBtn">Explore</button>
+                        </div>
+                    </div>
+
+                    <div class="portCard">
+                        <img class="img-fluid portCardImg" src="jum.png" alt="Chania">
+                        <div class="cardContent">
+                            <span class="portProjName">Jumia Clone</span>
+                            <button type="button" class="btn btn-outline-warning portProjBtn">Explore</button>
+                        </div>
+                    </div>
+
+                    <div class="portCard">
+                        <img class="img-fluid portCardImg" src="jum.png" alt="Chania">
+                        <div class="cardContent">
+                            <span class="portProjName">Jumia Clone</span>
+                            <button type="button" class="btn btn-outline-warning portProjBtn">Explore</button>
+                        </div>
+                    </div>
+
+                    <!-- /////////////////////////////////////// -->
+                    <div class="portBtnContt">
+                        <button type="button" class="btn btn-outline-light btn-lg  portBtn">Explore All</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        
+        <script>
+
+        </script>
+    </body>
+</html>
